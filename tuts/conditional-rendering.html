@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h4>vue conditions</h4>
+        <hr>
+        <div v-if="true"> this will render</div>
+        <div v-if="false"> this wont render </div>
+        <div v-if="books > 10"> render when books > 10</div>
+        <div v-if="showBook"> render when showBook set to true in app.js</div>
+        <hr>
+        <p v-if="showBook">{{title}} - {{author}} - {{books}} </p>
+        <button @click="tuggleShowBooks">
+            <span v-if="showBook">hide books</span>
+            <span v-if="!showBook">show books</span>
+            <!-- <span v-else>show books</span> -->
+            <!-- when v-if="false" the element doenst render -->
+        </button>
+        <div v-show="showBook">currently showing books</div>
+        <!-- when v-show="false" the element style="display: none;" -->
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

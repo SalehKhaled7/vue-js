@@ -7,9 +7,10 @@ const app = Vue.createApp({
     //data
     data(){
         return{
-            title   : 'book title 1',
-            author  : 'ali khaled',
-            books   : 12
+            title   : 'al-majarayat',
+            author  : 'ibrahim omar al-sakran',
+            books   : 12 ,
+            showBook : true
     
         }
     },
@@ -20,6 +21,9 @@ const app = Vue.createApp({
         },
         changeTitleWArg (tilte){
             this.title = tilte
+        },
+        tuggleShowBooks(){
+            this.showBook = !this.showBook
         }
 
 

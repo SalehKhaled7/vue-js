@@ -10,7 +10,10 @@ const app = Vue.createApp({
             title   : 'al-majarayat',
             author  : 'ibrahim omar al-sakran',
             books   : 12 ,
-            showBook : true
+            showBook : true,
+            text : 'old text',
+            x:0,
+            y:0,
     
         }
     },
@@ -24,8 +27,19 @@ const app = Vue.createApp({
         },
         tuggleShowBooks(){
             this.showBook = !this.showBook
-        }
-
+        },
+        handleEvents(e ,data){
+            console.log(e,e.type)
+            if(data){
+                console.log(data)
+            }
+        },
+        handleMouseMove(e){
+            this.x = e.offsetX
+            this.y = e.offsetY
+        
+        },
+        
 
     }
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #e4e2e2;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{title}} - {{author}} - {{books}}</p>
+        <br>
+        <div class="box" @mouseover="handleEvents($event ,5)"> mouseover </div>
+        <div class="box" @mouseleave="handleEvents"> mouseleave </div>
+        <div class="box" @dblclick="handleEvents"> double click</div>
+        <div class="box" @mousemove="handleMouseMove">{{x}},{{y}}</div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
